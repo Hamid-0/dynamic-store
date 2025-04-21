@@ -1,9 +1,12 @@
-import { Container, Flex, Text, HStack, Button } from "@chakra-ui/react"
+import { Container, Flex, Text, HStack, Button, useColorMode } from "@chakra-ui/react"
 import { BsFillPlusSquareFill } from "react-icons/bs";
-
 import { Link } from "react-router-dom";
+import { FaRegSun } from "react-icons/fa6";
+import { FaSun } from "react-icons/fa";
 
 const Navbar = () => {
+    const {colorMode,toggleColorMode} = useColorMode();
+
     return (
         <Container maxW={"1140px"} px={4}>
             <Flex h={16}
@@ -32,6 +35,9 @@ const Navbar = () => {
                             <BsFillPlusSquareFill fontSize={20} />
                         </Button>
                     </Link>
+                    <Button onClick={toggleColorMode}>
+                        {colorMode === "light" ?<FaRegSun fontSize={20} />: <FaSun fontSize={20}/>} 
+                    </Button>
 
                 </HStack>
             </Flex>
