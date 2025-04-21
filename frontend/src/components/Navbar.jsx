@@ -1,5 +1,7 @@
-import { Container, Flex, Text, Link, HStack, Button } from "@chakra-ui/react"
+import { Container, Flex, Text, HStack, Button } from "@chakra-ui/react"
 import { BsFillPlusSquareFill } from "react-icons/bs";
+
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
