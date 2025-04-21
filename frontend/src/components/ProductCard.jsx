@@ -10,21 +10,20 @@ const ProductCard = ({ product }) => {
     const bg = useColorModeValue("white", "gray.800");
     const handleDelete = async ()=>{
         const { success, message } = await deleteProduct(product._id)
-        console.log(success)
         if (success) {
             toast({
                 title: message,
                 status: 'success',
-                duration: 9000,
+                duration: 5000,
                 isClosable: true,
             })
         }
         else {
             toast({
-                title: 'Failed To Add Product',
+                title: 'Failed To Delete Product',
                 description: message,
                 status: 'error',
-                duration: 9000,
+                duration: 5000,
                 isClosable: true,
             })
         }
