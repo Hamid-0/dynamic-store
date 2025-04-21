@@ -2,7 +2,7 @@ import { Container, Flex, Text, HStack, Button, useColorMode } from "@chakra-ui/
 import { BsFillPlusSquareFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { FaRegSun } from "react-icons/fa6";
-import { FaSun } from "react-icons/fa";
+import { IoMoonSharp } from "react-icons/io5";
 
 const Navbar = () => {
     const {colorMode,toggleColorMode} = useColorMode();
@@ -36,7 +36,7 @@ const Navbar = () => {
                         </Button>
                     </Link>
                     <Button onClick={toggleColorMode}>
-                        {colorMode === "light" ?<FaRegSun fontSize={20} />: <FaSun fontSize={20}/>} 
+                        {colorMode === "light" ?<FaRegSun fontSize={20} />: <IoMoonSharp fontSize={20}/>} 
                     </Button>
 
                 </HStack>
