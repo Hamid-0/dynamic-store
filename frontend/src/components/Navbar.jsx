@@ -1,4 +1,4 @@
-import { Container, Flex, Text,Link, HStack, Button} from "@chakra-ui/react"
+import { Container, Flex, Text, Link, HStack, Button } from "@chakra-ui/react"
 import { BsFillPlusSquareFill } from "react-icons/bs";
 
 const Navbar = () => {
@@ -25,11 +25,11 @@ const Navbar = () => {
                     <Link to={"/"}>Product Store 🛒</Link>
                 </Text>
                 <HStack spacing={2} alignItems={"center"}>
-                <Link to={"/create"}>
-                <Button>
-                    <BsFillPlusSquareFill fontSize={20}/>
-                </Button>
-                </Link>
+                    <Link to={"/create"}>
+                        <Button>
+                            <BsFillPlusSquareFill fontSize={20} />
+                        </Button>
+                    </Link>
 
                 </HStack>
             </Flex>
