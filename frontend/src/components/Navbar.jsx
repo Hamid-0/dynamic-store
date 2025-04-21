@@ -5,8 +5,7 @@ import { FaRegSun } from "react-icons/fa6";
 import { IoMoonSharp } from "react-icons/io5";
 
 const Navbar = () => {
-    const {colorMode,toggleColorMode} = useColorMode();
-
+    const {colorMode,toggleColorMode} = useColorMode();    
     return (
         <Container maxW={"1140px"} px={4}>
             <Flex h={16}
