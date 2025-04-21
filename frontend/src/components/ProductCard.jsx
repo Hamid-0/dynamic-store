@@ -6,7 +6,6 @@ import { MdOutlineDelete } from "react-icons/md";
 const ProductCard = ({ product }) => {
     const textColor = useColorModeValue("gray.600", "gray.200");
     const bg = useColorModeValue("white", "gray.800");
-    console.log("enter")
     return (
         <Box
             shadow='lg'
