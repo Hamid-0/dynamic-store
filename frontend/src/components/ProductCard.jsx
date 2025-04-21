@@ -45,8 +45,25 @@ const ProductCard = ({ product }) => {
         }
     }
     const handleUpdate = async (pid, updatedProduct)=>{
-        await updateProduct(pid, updatedProduct)
-        onClose();
+        const {success,message}= await updateProduct(pid, updatedProduct)
+        if (success) {
+            toast({
+                title: "Product updated Successfully!",
+                status: 'success',
+                duration: 5000,
+                isClosable: true,
+            })
+            onClose();
+        }
+        else {
+            toast({
+                title: 'Failed To Update Product',
+                description: message,
+                status: 'error',
+                duration: 5000,
+                isClosable: true,
+            })
+        }
     }
     return (
         <Box
