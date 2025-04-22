@@ -20,7 +20,7 @@ A simple storefront application built using the MERN (MongoDB, Express, React, N
 
 ## Tech Stack
 
-- **Frontend**: 
+- **Frontend**:
   - React.js with Vite
   - Chakra UI
   - React Router DOM
@@ -29,6 +29,7 @@ A simple storefront application built using the MERN (MongoDB, Express, React, N
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Environment Variables**: dotenv
+- **Testing**: jest, supertest cross-env
 
 ## Installation
 
@@ -60,6 +61,12 @@ A simple storefront application built using the MERN (MongoDB, Express, React, N
    ```
 
    The server starts at `http://localhost:5000`.
+
+## Testing
+
+   ```bash
+   npm run test
+   ```
 
 ## API Endpoints
 
@@ -116,6 +123,8 @@ MERN/
 │   ├── routes/
 │   │   └── product.routes.js      # Product routes
 │   └── server.js          # Express server
+|──test/
+|   └──api.test.js        # API testing
 ├── .env                   # Environment variables
 ├── .gitignore            # Ignored files
 ├── package.json          # Project metadata and dependencies
@@ -124,20 +133,28 @@ MERN/
 
 ## Dependencies
 
-### Backend:
-  - `express`
-  - `mongoose`
-  - `dotenv`
-  - `cors`
-  - `nodemon` (for development)
+### Backend
 
-### Frontend:
-  - `react`
-  - `react-dom`
-  - `@chakra-ui/react`
-  - `@emotion/react`
-  - `@emotion/styled`
-  - `framer-motion`
-  - `react-router-dom`
-  - `zustand`
-  - `react-icons`
+- `express`
+- `mongoose`
+- `dotenv`
+- `cors`
+- `nodemon` (for development)
+
+### Frontend
+
+- `react`
+- `react-dom`
+- `@chakra-ui/react`
+- `@emotion/react`
+- `@emotion/styled`
+- `framer-motion`
+- `react-router-dom`
+- `zustand`
+- `react-icons`
+
+## Testing
+
+- `jest`
+- `supertest`
+- `cross-env`
