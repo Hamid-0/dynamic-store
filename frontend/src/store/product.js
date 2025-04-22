@@ -1,4 +1,9 @@
 import { create } from "zustand";
+import dotenv from "dotenv"
+
+dotenv.config();
+const PORT = process.env.PORT || 5000;
+
 export const useProductStore = create((set) => {
   return {
     products: [],
@@ -7,7 +12,7 @@ export const useProductStore = create((set) => {
       if (!newProduct.name || !newProduct.image || !newProduct.price) {
         return { success: false, message: "Please fill in all fields." };
       }
-      const res = await fetch("http://localhost:5001/api/products", {
+      const res = await fetch(`http://localhost:${PORT}/api/products`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -19,12 +24,12 @@ export const useProductStore = create((set) => {
       return { success: true, message: "Product created succesfully" };
     },
     fetchProducts: async () => {
-      const res = await fetch("http://localhost:5001/api/products");
+      const res = await fetch(`http://localhost:${PORT}/api/products`);
       const data = await res.json();
       set({ products: data.data });
     },
     deleteProduct: async (pid) => {
-      const res = await fetch(`http://localhost:5001/api/products/${pid}`, {
+      const res = await fetch(`http://localhost:${PORT}/api/products/${pid}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
