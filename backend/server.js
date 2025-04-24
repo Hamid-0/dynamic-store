@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 // Enable CORS for all origins
-app.use(cors());
+app.use(cors({origin:"*"}));
 
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
